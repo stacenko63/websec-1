@@ -1,0 +1,113 @@
+* {
+    color: red;
+    font-weight: bold;
+}
+
+[data-info] {
+    position: relative;
+}
+
+[data-info]::after {
+    content: attr(data-info);
+    position: absolute;
+    width: 200px;
+    left: 0;
+    top: 0;
+    background: red;
+    color: #fff;
+    padding: 0.5em;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    opacity: 0;
+    transition: 1s;
+}
+
+[data-info]:hover::after {
+    opacity: 1;
+    top: 2em;
+}
+
+#history {
+    opacity: 0.5;
+}
+
+#calculator {
+    max-width: 540px;
+    margin: 2rem auto;
+    padding: 1rem;
+    border-radius: 0.625rem;
+    background: #BAFFC8;
+}
+  
+input, #calculate-button, #operator {
+    padding: 0.5rem; 
+    border: 0.125rem dotted #fd0303;
+    border-radius: 0.625rem;
+    background: #baffc2;
+}
+
+.highlight {
+    outline: none;
+    border: 2px solid #3498db;
+    box-shadow: 0 0 5px 0 #3498db;
+}
+  
+#operator {
+    width: 5rem;
+    height: 2rem;
+    padding-left: 0.25rem;
+}
+  
+#result {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 0.125rem dotted #fd0303;
+    border-radius: 0.625rem;
+    font-size: 1.125rem; 
+}
+  
+#inputPart, #sendPart {
+    display: flex;
+    align-items: center; 
+}
+  
+#inputPart {
+    justify-content: space-between;
+}
+  
+#sendPart {
+    justify-content: center;  
+    padding-top: 15px;
+}
+
+@media (max-width: 576px) {
+  
+    #inputPart,#sendPart {
+      flex-direction: column;
+    }
+  
+    #inputPart input {
+      margin-bottom: 1rem;
+    }
+
+    #secondNumber {
+        margin-top: 1rem;
+    }
+    
+}
+  
+@media (max-width: 375px) {
+    
+    #calculator {
+      width: 100%;
+    }
+  
+    #result {
+      font-size: 1rem;
+    }
+  
+    input, #calculate-button, #operator {
+      width: 100%;
+    }
+    
+}   

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Калькулятор</title>
+</head>
+<body>
+    <header>
+        <div id="calculator">
+            <div id="inputPart">
+                <span id="firstNumberErrorText">
+                    <input type="text" id="firstNumber" name="firstNumber">
+                </span>
+                <select id="operator">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+                <span id="secondNumberErrorText">
+                    <input type="text" id="secondNumber" name="secondNumber">
+                </span>
+                
+            </div>
+
+            <div id="sendPart">
+                <button id="calculate-button">подсчитать</button>
+            </div>
+            <div id="result"></div>
+        </div>
+    </header>
+    <footer>
+        <script src="script.js"></script>
+    </footer>
+</body>
+</html>
